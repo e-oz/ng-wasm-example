@@ -1,0 +1,14 @@
+{
+  "name": "example-rust-lib",
+  "version": "0.1.0",
+  "files": [
+    "example_rust_lib_bg.wasm",
+    "example_rust_lib.js",
+    "example_rust_lib.d.ts"
+  ],
+  "module": "example_rust_lib.js",
+  "types": "example_rust_lib.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}

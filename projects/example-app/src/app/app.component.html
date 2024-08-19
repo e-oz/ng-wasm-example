@@ -1,0 +1,18 @@
+<input max="22" min="1" type="number" placeholder="Input a number" #inp/>
+
+<button
+  type="button"
+  (click)="calculate(inp.value)"
+  [disabled]="calculating()"
+>
+  Calculate
+</button>
+
+@if (!calculating()) {
+  @if (jsResult()) {
+    <div>Result in JS: {{ jsResult() }}, calculated in {{ jsTime() }}</div>
+  }
+  @if (rsResult()) {
+    <div>Result in Rust: {{ rsResult() }}, calculated in {{ rsTime() }}</div>
+  }
+}
