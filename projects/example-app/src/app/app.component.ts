@@ -2,12 +2,10 @@ import { ChangeDetectionStrategy, Component, type OnInit, signal } from '@angula
 import { get_factorial, initExampleRust } from 'wasm-example';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent implements OnInit {
   jsResult = signal<string>('');
